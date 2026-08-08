@@ -11,6 +11,7 @@
     --blue: #070b7a;
     --white: #ffffff;
     --black: #000000;
+    --light:#fffbf3;
     --comic-font: "Comic Sans MS", "Comic Sans", cursive;;
 
 }
@@ -26,6 +27,7 @@ section[data-b_color="azure"] {
     width: 100%;
     overflow-x: hidden; /* Clips any content that tries to push past the screen width */
 }
+
 /* HERO-SECTION */
 .Hero-section .centre {
     font-family: var(--comic-font);
@@ -34,15 +36,15 @@ section[data-b_color="azure"] {
 
 }
 .Hero-section .centre h2 {
-    font-size: 2.4rem;
-    margin: 2rem 1.5rem;
-    margin-top: 3rem;
+    font-size: 2rem;
+    margin: 1rem 1rem;
+    margin-top: 2rem;
     text-align: center;
 }
 .Start-btn{
     background-color: var(--white);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: center;
     padding: 10px 20px;
     border-radius: 15px;
@@ -82,3 +84,199 @@ section[data-b_color="azure"] {
     z-index: 4;
 }
 /* TITLE-SECTION */
+.b-banner{
+    padding: 10px;
+    text-align: center;
+}
+.b-heading{
+    color: var(--white);
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 4rem 1rem 1rem;
+}
+.b-girl {
+  font-family:var(--comic-font);
+  color: #ffb1b8; /* Matches the soft pink typography color */
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 0;
+  /* add animation, a lot */
+
+}
+.title-img{
+    align-items: center;
+    text-align: center;
+}
+.title-pic{
+    border: 3px solid var(--white);
+    border-radius: 5px;
+    height: auto;
+    /* animation */
+}
+/* azure section's footer img*/
+.footer-imgs{
+    display: flex;
+}
+/* Letter-section */
+.letter-box{
+    background-color: var(--light);
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 10px;
+    font-family: var(--comic-font);
+    font-size: 1.4rem;
+}
+.letter-title{
+    font-size: 1.5em;
+}
+.letter-text{
+    margin: 9px;
+}
+.letter-imgs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    margin: 20px;
+
+}
+.letter-pic{
+    width: minmax(300px, 100%);
+    height: auto;  
+    border: 5px solid var(--white); 
+    border-radius: 10px;
+    /* 1. Basic Animation Configuration */
+    animation-name: pop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    
+    /* 2. Freeze the image at its final 'to' frame permanently */
+    animation-fill-mode: both; 
+
+    /* 3. Bind tracking to the viewport window */
+    animation-timeline: view();
+    
+    /* 4. THE FIX: Change the timeline range behavior */
+    /* This forces the timeline to only scale between the moment it enters the screen (0%) */
+    /* until it is fully inside the screen (100%). Past that point, it locks. */
+    animation-range: entry 0% entry 100%;
+    /* The Fix: Isolates the animation layer so it doesn't affect section spacing */
+    will-change: transform, opacity; 
+}
+
+.cake-pic{
+    width: minmax(300px, 100%);
+    height: auto;  
+}
+/* Memeories Together */
+.together-box{
+    background-color: var(--pink);
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 10px;
+    font-family: var(--comic-font);
+    font-size: 1.4rem;
+    border: var(--white) 3px solid;
+}
+.together-title{
+    font-size: 1.5em;
+    color: var(--blue);
+    text-align: center;
+}
+.together-text{
+    margin: 9px;
+    color: var(--azure);
+}
+.together-imgs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    justify-items: space-around;
+    margin: 20px;
+}
+.together-imgs figure{
+    width: minmax(300px, 50%);
+    height: auto;
+    background-color: var(--pink);
+    border: var(--white) 3px solid;
+    border-radius: 20px;
+    align-items: center;
+    text-align: center;
+}
+.together-imgs img{
+    width: 90%;
+    height: auto;  
+    border-radius: 20px;
+    margin: 15px;
+}
+.together-imgs figcaption{
+    color: var(--blue);
+    font-size: 1.2rem;
+    margin: 30px;
+    font-weight: 600;
+    font-family: var(--comic-font);
+}
+/* Her-section */
+.end-box{
+    background-color: var(--white);
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 10px;
+    font-family: var(--comic-font);
+    font-size: 1.4rem;
+    border: var(--white) 3px solid;
+}
+.memory-box{
+     background-color: var(--white);
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 10px;
+    font-family: var(--comic-font);
+    font-size: 1.4rem;
+    border: var(--white) 3px solid;
+    text-align: center;  
+}
+.nice-pics{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    justify-items: space-around;
+    margin: 10px;
+}
+.nice-pics img{
+    width: 70%;
+    height: auto;  
+    border-radius: 20px;
+    margin: 15px;
+}
+/* Footer */
+.footer-img{
+    align-items: center;
+    text-align: center;
+}
+.footer img{
+    border: 3px solid var(--white);
+    border-radius: 5px;
+    height: auto;
+    width: 300px;
+    margin: 20px;
+    
+}
+.footer h1{
+  font-family:var(--comic-font);
+  color: var(--white); /* Matches the soft pink typography color */
+  font-size: 3rem;
+  font-weight: 500;
+  margin: 20px;
+  text-align: center;
+  /* add animation, a lot */
+}
+.footer h2{
+    text-align: right;
+    margin: 30px;
+}
+
+
+
